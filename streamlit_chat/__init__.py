@@ -87,12 +87,7 @@ def message(message: str,
 
     Returns: None
     """
-    if logo:
-        _streamlit_chat(message=message, seed=seed, isUser=is_user, logo=logo, key=key)
-    else:
-        if not avatar_style:
-            avatar_style = "fun-emoji" if is_user else "bottts"
-        _streamlit_chat(message=message, seed=seed, isUser=is_user, avatarStyle=avatar_style, key=key)
+    _streamlit_chat(message=message, seed=seed, isUser=is_user, avatarStyle=avatar_style, key=key)
 
 
 if not _RELEASE:
